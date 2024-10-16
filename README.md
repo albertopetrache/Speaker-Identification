@@ -8,6 +8,7 @@ spectrograms. I also explored the effectiveness of pre‐trained models such as
 “squeezenet1_0”, “densenet121”, and “vgg16”.
 
 In this project, I used three approaches to analyze audio signals, each employing different neural network architectures for speaker identification.
+
 I. Approach based on Fully Connected Neural Networks (FCNN): I selected a set of significant features for the representation and analysis of the audio signal: MFCC (Mel-frequency cepstral coefficients), delta and delta-delta MFCC, LPC coefficients, and the zero-crossing rate. After feature extraction, I concatenated these features to form a final feature vector, and then calculated the mean and standard deviation for each feature across the entire resulting vector. These statistics were then concatenated to form a final feature vector at the recording level.
 
 II. Approach based on Convolutional Neural Networks (CNN): In this approach based on convolutional neural networks, I used spectrograms generated from audio recordings to train a CNN model for speaker identification. Given the variation in the length of audio recordings in the Librispeech and TIMIT datasets, I calculated the maximum length of a recording from both datasets. To standardize the dimensions, I padded the recordings with zero-value samples up to the calculated maximum length.
